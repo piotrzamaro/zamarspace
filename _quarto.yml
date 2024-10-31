@@ -1,0 +1,66 @@
+project:
+  type: book
+  output-dir: docs
+
+
+book:
+  title: "ZAMAR|SPACE"
+  subtitle: "hub rzeczy różnych"
+  chapters:
+    - index.qmd
+    - part: "Analiza danych"
+      chapters:
+        - analiza_danych/analizy_przezycia.qmd
+        - analiza_danych/rekonstrukcja.qmd
+ #       - analiza_danych/wizualizacje.qmd
+
+    - part: "AI & ML"
+      chapters:
+        - uczenie_maszynowe/klasyfikatory.qmd
+        - uczenie_maszynowe/nlp.qmd
+        
+    - part: "Aplikacje"
+      chapters:
+        - aplikacje/SURVIVAL.qmd
+#        - aplikacje/META.qmd
+#        - aplikacje/EPI.qmd
+        
+    - part: "Edukacja"
+      chapters:
+        - edukacja/logika.qmd
+        - edukacja/algebra.qmd
+        - edukacja/matematyka.qmd
+
+    - kontakt.qmd
+    - references.qmd
+
+  url: https://ddotta.github.io/cookbook-rpolars/
+  sharing: [twitter, facebook]
+
+  page-navigation: true
+  sidebar: 
+    logo: img/logo.png  # Upewnij się, że ścieżka jest poprawna
+    search: true
+    tools:
+      - icon: github
+        href: https://github.com/TwojProfilGitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/TwojProfilLinkedIn
+  repo-url: https://github.com/quarto-dev/quarto-demo
+  repo-actions: [edit, source, issue]
+
+#bibliography: references.bib
+lang: "pl"
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
